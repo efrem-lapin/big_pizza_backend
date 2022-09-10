@@ -4,7 +4,7 @@ import cors from "cors";
 import * as PizzaControllers from "./controllers/PizzaController.js"
 
 mongoose
-  .connect('mongodb+srv://adminMongo:passMDB12345@cluster0.1iyqpsd.mongodb.net/big_pizza?retryWrites=true&w=majority')
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('DB OK!');
   })
