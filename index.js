@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 })
 
+app.get("/pp", (req, res) => {
+  res.send("pp");
+})
+
 app.get("/pizza", PizzaControllers.getAllPizzas);
 
 app.listen(process.env.PORT || 4444, (err) => {
