@@ -6,6 +6,6 @@ export const getAllPizzas = async (req, res) => {
 
       res.json(pizza)
     } catch (error) {
-        
+        console.log(error);
     }
 }
