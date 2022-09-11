@@ -10,7 +10,7 @@ import * as DessertsControllers from "./controllers/DessertsController.js";
 import * as ComboControllers from "./controllers/ComboController.js";
 
 mongoose
-  .connect("mongodb+srv://adminMongo:passMDB12345@cluster0.1iyqpsd.mongodb.net/big_pizza?retryWrites=true&w=majority")
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('DB OK!');
   })
